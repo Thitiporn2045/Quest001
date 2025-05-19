@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   end
   get "brags", to: "brags#index", as: :brags
   get "up" => "rails/health#show", as: :rails_health_check
+
+  root "tasks#index"
 end
