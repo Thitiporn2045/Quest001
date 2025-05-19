@@ -1,0 +1,16 @@
+<% content_for :title, "รายละเอียดงาน" %>
+
+<div class="mx-auto mt-10 min-h-screen w-full lg:w-2/3 xl:w-1/2 p-6">
+  <% if notice.present? %>
+    <div class="alert alert-success mb-4">
+      <span><%= notice %></span>
+    </div>
+  <% end %>
+
+  <%= render @task %>
+
+  <div class="mt-6 flex items-center justify-center gap-4">
+        <!-- ปุ่มกลับ -->
+      <%= link_to "← กลับหน้ารายการงาน", tasks_path, class: "text-[#CCCCE3] transition-all duration-300 transform hover:scale-[1.01]" %>
+  </div>
+</div>
